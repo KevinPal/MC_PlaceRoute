@@ -1,0 +1,8 @@
+read -sv ./yeet.v
+hierarchy -top top_lvl
+proc; opt; techmap; opt
+flatten
+abc -liberty cmos_cells.lib
+clean
+write_verilog synth.v
+write_blif synth.blif
